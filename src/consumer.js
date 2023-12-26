@@ -16,6 +16,10 @@ const init = async () => {
   await channel.assertQueue('export:notes', { durable: true });
 
   channel.consume('export:notes', listener.listen, { noAck: true });
+
+  setTimeout(() => {
+    connection.close();
+  }, 10000);
 };
 
 init();
