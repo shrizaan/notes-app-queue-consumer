@@ -19,7 +19,7 @@ const init = async () => {
 
   setTimeout(() => {
     connection.close();
-  }, 10000);
+  }, 1000);
 };
 
 init();
